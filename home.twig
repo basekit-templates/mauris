@@ -5,7 +5,10 @@
 
 <div class="nav-header">
     <div class="tabletmob-nav">
-                {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
+        {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
+        <div class="basket-container">
+            {{widget('ecombasket', 'ecombasket', {})|raw}}
+        </div>
     </div>
 
     <div class="feature-content">
@@ -13,6 +16,9 @@
         <header class="bk-header">
         	<div class="desktop-nav">
                 {{widget('extendednavigation', 'desktopnavigation', {})|raw}}
+                <div class="basket-container">
+                    {{widget('ecombasket', 'ecombasket', {})|raw}}
+                </div>
         	</div>
             <div class="wrapper">
                 <div class="companyheader">
