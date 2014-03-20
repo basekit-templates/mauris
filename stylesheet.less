@@ -14,7 +14,7 @@ body {
 }
 
 .bk-pt-default .main {
-    border-top: 1px solid @color-swatch5;
+    border-top: 1px solid fade(@color-swatch5,20%);
     padding-top: 2em;
 }
 
@@ -73,7 +73,7 @@ body {
     .widget.extendednavigation {
         width: 100%;
         position: absolute;
-        background-color: fade(@color-swatch7, 30%);
+        background-color: fade(@color-swatch5, 40%);
     }
 }
 
@@ -1036,7 +1036,7 @@ width: 100%;
 
 hr {
     &.line {
-        background-color: @color-swatch3;
+        background-color: fade(@color-swatch5,20%);
         height: 1px;
     }
 }
@@ -1050,8 +1050,9 @@ hr {
 .bk-footer {
     text-align: center;
     background-color: transparent;
+    margin-top: 3em;
     .wrapper {
-        border-top: 1px solid @color-swatch5;
+        border-top: 1px solid fade(@color-swatch5,20%);
         padding: 1em 0;
     }
 }
