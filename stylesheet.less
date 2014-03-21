@@ -89,9 +89,8 @@ body {
             }
         }
         ul {
-            display: table;
             float: none;
-            margin: 0 auto;
+            margin-left: 2.5%;
             text-align: center;
             padding: 0;
             @media @tablet {
@@ -1123,5 +1122,38 @@ hr {
         border: 1px solid @color-swatch3;
         color: @color-swatch3;
     }
+
+/* ===============================
+  ECOM - BASKET
+   =============================== */
+
+.basket-container {
+    position: relative;
+    top: 0.5%;
+    right: 2.5%;
+    width: 250px;
+    background-color: @color-swatch1;
+    padding: 10px 10px 20px;
+    border: none;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    float: right;
+    text-align: left;
+    .basket-checkout-link {
+        padding: 10px;
+        font-family: @font-swatch7-font-family;
+        color: @font-swatch7-color;
+        font-size: @font-swatch7-font-size;
+        font-weight: @font-swatch7-font-weight;
+        line-height: @font-swatch7-line-height;
+        background-color: @font-swatch7-background-color;
+        border: none;
+    }
+}
+
 
 
