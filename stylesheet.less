@@ -1131,7 +1131,6 @@ hr {
     position: relative;
     top: 0.5%;
     right: 2.5%;
-    width: 250px;
     background-color: @color-swatch1;
     padding: 10px 10px 20px;
     border: none;
@@ -1143,6 +1142,14 @@ hr {
     border-bottom-left-radius: 5px;
     float: right;
     text-align: left;
+    width: 250px;
+    @media @tablet {
+        width: 100%;
+        right: 0;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-bottom-radius: 0px;
+    }
     .basket-checkout-link {
         padding: 10px;
         font-family: @font-swatch7-font-family;
