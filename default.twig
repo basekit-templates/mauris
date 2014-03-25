@@ -8,7 +8,7 @@
     <div class="tabletmob-nav">
         {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
         <div class="basket-container">
-            {{widget('ecombasket', 'ecombasket', {})|raw}}
+            {{widget('ecombasket', 'ecombasket1', {})|raw}}
         </div>
     </div>
 
@@ -18,7 +18,7 @@
             <div class="desktop-nav">
                 {{widget('extendednavigation', 'desktopnavigation', {})|raw}}
                 <div class="basket-container">
-                    {{widget('ecombasket', 'ecombasket', {})|raw}}
+                    {{widget('ecombasket', 'ecombasket2', {})|raw}}
                 </div>
             </div>
             <div class="wrapper">
@@ -32,6 +32,8 @@
 </div>
 
 <div class="main wrapper clearfix">
+    {{widget('ecomcheckout', 'ecomcheckout', {})|raw}}
+    {{widget('ecomproductslist', 'ecomlisthome', {})|raw}}
     {{widget('ecomproduct', 'ecomproduct', {})|raw}}
 </div>
 
