@@ -2,7 +2,7 @@
     "name":"Mauris Handbags",
     "thumbnail":"velit.png",
     "screenshot":"velit.png",
-    "pageTypes": ["productlist","product", "blogpost", "bloglistposts", "default", "home", "about", "contact", "gallery"],
+    "pageTypes": ["productlist","product", "checkout", "default", "home", "about", "contact", "gallery"],
     "tags": {
     "en": ["clean", "menu", "cafe", "bar", "restaurant"],
     "es": ["limpio", "menú", "cafetería", "bar", "restaurante"],
