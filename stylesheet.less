@@ -996,21 +996,6 @@ width: 100%;
 
 
 /* ===============================
-  BLOG
-   =============================== */
-
-.basket-container {
-    position:fixed;
-    top:0;
-    right:20px;
-    width:250px;
-    background-color:@color-swatch2;
-    padding:10px;
-    border-bottom:3px solid @color-swatch3;
-}
-
-
-/* ===============================
   SOCIAL ICONS 
    =============================== */
 
@@ -1128,37 +1113,65 @@ hr {
    =============================== */
 
 .basket-container {
-    position: relative;
-    top: 0.5%;
-    right: 2.5%;
-    background-color: @color-swatch1;
-    padding: 10px 10px 20px;
-    border: none;
-    -webkit-border-bottom-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -moz-border-radius-bottomleft: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
     float: right;
-    text-align: left;
     width: 250px;
-    @media @tablet {
-        width: 100%;
-        right: 0;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-bottom-radius: 0px;
+    margin-right: 2.5%;
+    .widget.ecombasket .ecombasket-pull p,
+    .widget.ecombasket .ecombasket-pull p span {
+        color: @color-swatch1;
+        padding: 15px 0;
     }
-    .basket-checkout-link {
-        padding: 10px;
-        font-family: @font-swatch7-font-family;
-        color: @font-swatch7-color;
-        font-size: @font-swatch7-font-size;
-        font-weight: @font-swatch7-font-weight;
-        line-height: @font-swatch7-line-height;
-        background-color: @font-swatch7-background-color;
+    &:hover .ecombasket-list-container {
+        display: block;
+    }
+    .ecombasket-list-container {
+        display: none;
+        text-align: left;
         border: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: @color-swatch1;
+        padding: 0.5em 1em 1.5em;
+        ul {
+            display: inline-block;
+            padding: 0 0 1.5em;
+            li {
+                width: 100%;
+                list-style: none;
+                float: left;
+                padding: 0.5em 0 1em;
+                border-bottom: 1px solid fade(@color-swatch5,8%);
+                button {
+                    border: none;
+                    background-color: @color-swatch1;
+                    text-decoration: underline;
+                    padding: 0;
+                    display: block;
+                    width: 100%;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        @media @tablet {
+            width: 100%;
+            right: 0;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-bottom-radius: 0px;
+        }
+        .basket-checkout-link {
+            padding: 10px;
+            font-family: @font-swatch7-font-family;
+            color: @font-swatch7-color;
+            font-size: @font-swatch7-font-size;
+            font-weight: @font-swatch7-font-weight;
+            line-height: @font-swatch7-line-height;
+            background-color: @font-swatch7-background-color;
+            border: none;
+        }
     }
 }
 
