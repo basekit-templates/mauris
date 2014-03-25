@@ -609,7 +609,7 @@ body {
                                 display: inline-block;
                                 .inner-item {
                                     h3 {
-                                         &:after {
+                                        &:after {
                                             content: "\2605";
                                             font-size: 12px;
                                             display: inline-block;
@@ -1062,6 +1062,7 @@ hr {
         background-color: transparent;
         border: 1px solid @color-swatch3;
         color: @color-swatch3;
+        float: none;
     }
 }
 
@@ -1112,20 +1113,56 @@ hr {
   ECOM - BASKET
    =============================== */
 
-.basket-container {
+.widget.ecombasket {
     float: right;
-    width: 250px;
     margin-right: 2.5%;
-    .widget.ecombasket .ecombasket-pull p,
-    .widget.ecombasket .ecombasket-pull p span {
+    width: 250px;
+    @media @tablet {
+        width: 90%;
+        margin: 0 5%;
+        background-color: darken(@color-swatch1,5%);
+    }
+    .ecombasket-pull p {
+        &:before {
+            content: "";
+            background-image: image('/images/basketicon.png');
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 16px;
+            width: 21px;
+            margin: 0 10px 0 0;
+            position: relative;
+            top:1px;
+        }
+        @media @tablet {
+            &:before {
+                content: "";
+                background-image: image('/images/basketicon-tablet.png');
+            }
+        }
+
+    }
+
+    .ecombasket-pull p,
+    .ecombasket-pull p span {
         color: @color-swatch1;
         padding: 15px 0;
+        background-color: transparent;
+        @media @tablet {
+            color: @color-swatch5;
+            padding: 1em;
+        }
+
     }
     &:hover .ecombasket-list-container {
         display: block;
     }
     .ecombasket-list-container {
         display: none;
+        @media @tablet {
+            display: block;
+            background-color: darken(@color-swatch1,5%);
+        }
         text-align: left;
         border: none;
         -webkit-border-radius: 5px;
@@ -1136,15 +1173,21 @@ hr {
         ul {
             display: inline-block;
             padding: 0 0 1.5em;
+            width: 100%;
             li {
                 width: 100%;
                 list-style: none;
                 float: left;
                 padding: 0.5em 0 1em;
                 border-bottom: 1px solid fade(@color-swatch5,8%);
+                &:first-child {
+                    @media @tablet {
+                        border-top: 1px solid fade(@color-swatch5,8%);
+                    }
+                }
                 button {
                     border: none;
-                    background-color: @color-swatch1;
+                    background-color: transparent;
                     text-decoration: underline;
                     padding: 0;
                     display: block;
