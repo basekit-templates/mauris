@@ -7,9 +7,6 @@
 <div class="nav-header">
     <div class="tabletmob-nav">
         {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
-        <div class="basket-container">
-            {{widget('ecombasket', 'ecombasket1', {})|raw}}
-        </div>
     </div>
 
     <div class="feature-content">
@@ -18,7 +15,7 @@
             <div class="desktop-nav">
                 {{widget('extendednavigation', 'desktopnavigation', {})|raw}}
                 <div class="basket-container">
-                    {{widget('ecombasket', 'ecombasket2', {})|raw}}
+                    {{widget('ecombasket', 'desktopecombasket', {})|raw}}
                 </div>
             </div>
             <div class="wrapper">
@@ -29,6 +26,10 @@
             </div>
         </header>
     </div>
+</div>
+
+<div class="basket-container">
+    {{widget('ecombasket', 'tabletecombasket', {})|raw}}
 </div>
 
 <div class="main wrapper clearfix">
