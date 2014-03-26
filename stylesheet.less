@@ -1113,14 +1113,30 @@ hr {
   ECOM - BASKET
    =============================== */
 
+.tablet-basket-container {
+    display: none;
+    @media @tablet {
+        display: block;
+        margin: 1.7em 0;
+        width: 100%;
+        float: left;
+    }
+}   
+
 .widget.ecombasket {
     float: right;
     margin-right: 2.5%;
     width: 250px;
+    z-index: 2;
     @media @tablet {
         width: 90%;
         margin: 0 5%;
+        padding: 0.5em 0;
         background-color: darken(@color-swatch1,5%);
+        border: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
     }
     .ecombasket-pull p {
         &:before {
@@ -1146,7 +1162,7 @@ hr {
     .ecombasket-pull p,
     .ecombasket-pull p span {
         color: @color-swatch1;
-        padding: 15px 0;
+        padding: 14px 0;
         background-color: transparent;
         @media @tablet {
             color: @color-swatch5;
@@ -1159,32 +1175,31 @@ hr {
     }
     .ecombasket-list-container {
         display: none;
-        @media @tablet {
-            display: block;
-            background-color: darken(@color-swatch1,5%);
-        }
         text-align: left;
-        border: none;
+        border: 1px solid fade(@color-swatch5,8%);
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
         background-color: @color-swatch1;
-        padding: 0.5em 1em 1.5em;
+        padding: 0.5em 1em;
+        @media @tablet {
+            border: none;
+            display: block;
+            background-color: darken(@color-swatch1,5%);
+            width: 100%;
+            right: 0;
+            padding: 0em 1em 0.5em;
+        }
         ul {
             display: inline-block;
-            padding: 0 0 1.5em;
+            padding: 0;
             width: 100%;
             li {
                 width: 100%;
                 list-style: none;
                 float: left;
                 padding: 0.5em 0 1em;
-                border-bottom: 1px solid fade(@color-swatch5,8%);
-                &:first-child {
-                    @media @tablet {
-                        border-top: 1px solid fade(@color-swatch5,8%);
-                    }
-                }
+                border-top: 1px solid fade(@color-swatch5,8%);
                 button {
                     border: none;
                     background-color: transparent;
@@ -1198,25 +1213,26 @@ hr {
                 }
             }
         }
-        @media @tablet {
-            width: 100%;
-            right: 0;
-            -webkit-border-radius: 0px;
-            -moz-border-radius: 0px;
-            border-bottom-radius: 0px;
+        .basket-total-wrap p {
+            padding: 1em 0;
+            border-top: 1px solid fade(@color-swatch5,8%);
+            border-bottom: 1px solid fade(@color-swatch5,8%);
         }
-        .basket-checkout-link {
-            padding: 10px;
-            font-family: @font-swatch7-font-family;
-            color: @font-swatch7-color;
-            font-size: @font-swatch7-font-size;
-            font-weight: @font-swatch7-font-weight;
-            line-height: @font-swatch7-line-height;
-            background-color: @font-swatch7-background-color;
-            border: none;
+        .basket-checkout-wrap {
+            margin: 1.5em 0 1em;
+            .basket-checkout-link {
+                padding: 10px;
+                font-family: @font-swatch7-font-family;
+                color: @font-swatch7-color;
+                font-size: @font-swatch7-font-size;
+                font-weight: @font-swatch7-font-weight;
+                line-height: @font-swatch7-line-height;
+                background-color: @font-swatch7-background-color;
+                border: none;
+            }
+
         }
     }
 }
-
 
 
