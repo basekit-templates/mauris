@@ -1071,43 +1071,63 @@ hr {
    =============================== */
 
 .widget.ecomproduct {
-    .ecom-product-images-container {
-        width: 50%;
-        float: left;
-        margin-bottom: 1em;
-    }
-    .ecom-product-preview-image-wrap {
-        height: 300px;
-        margin-bottom: 1em;
-    }
-    .ecom-product-image-list {
-        li {
-            height: 50px;
-            width: 50px;
+    .ecom-product {
+        .ecom-product-images-container {
+            width: 50%;
             float: left;
-            margin: 0 0.5em 0.5em 0;
+            margin-bottom: 1em;
         }
-    }
-    .ecom-product-long-description {
-        width: 100%;
-        clear: both;
-    }
-}
+        .ecom-product-preview-image-wrap {
+            height: 300px;
+            margin-bottom: 1em;
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+            img {
+                display: none;
+            }
+        }
+        .ecom-product-image-list {
+            li {
+                height: 50px;
+                width: 50px;
+                float: left;
+                margin: 0 0.5em 0.5em 0;
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                overflow: hidden;
+                img {
+                    display: none;
+                }
+            }
+        }
+        .ecom-product-long-description {
+            width: 100%;
+            clear: both;
+        }
+        .ecom-product-title, .ecom-product-sku, .ecom-product-category, button {
+            width: 50%;
+            padding-left: 20px;
+            float: left;
+            text-align: left;
+        }
 
-.ecom-product-title, .ecom-product-sku, button {
-    width: 50%;
-    padding-left: 20px;
-    float: left;
-    text-align: left;
-}
+        button.btn {
+            width: auto;
+            margin: 20px 20px 0;
+        }
+    } /* end ecom-product */
+} /* end .widget.ecomproduct */
 
-.ecom-product button.btn {
-        width: auto;
-        margin-left: 20px;
-        background-color: transparent;
-        border: 1px solid @color-swatch3;
-        color: @color-swatch3;
-    }
+
 
 /* ===============================
   ECOM - BASKET
@@ -1156,7 +1176,6 @@ hr {
                 background-image: image('/images/basketicon-tablet.png');
             }
         }
-
     }
 
     .ecombasket-pull p,
@@ -1198,15 +1217,49 @@ hr {
                 width: 100%;
                 list-style: none;
                 float: left;
-                padding: 0.5em 0 1em;
                 border-top: 1px solid fade(@color-swatch5,8%);
+                padding: 1em 0;
+                @media @tablet {
+                    padding: 1.5em 0;
+                }
+                &:first-child {
+                    border-top: none;
+                    @media @tablet {
+                        border-top: 1px solid fade(@color-swatch5,8%);
+                    }
+                }
+                .ecombasekit-item-image {
+                    width: 50px;
+                    height: 50px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                    overflow: hidden;
+                    float: left;
+                    img {
+                        display: none;
+                    }
+                    @media @tablet {
+                        width: 10%;
+                    }
+                }
+                span, button {
+                    width: 155px;
+                    float: right;
+                    @media @tablet {
+                        width: 89%;
+                    }
+                }
                 button {
                     border: none;
                     background-color: transparent;
                     text-decoration: underline;
                     padding: 0;
                     display: block;
-                    width: 100%;
+                    text-align: left;
                     &:hover {
                         text-decoration: none;
                     }
@@ -1214,9 +1267,12 @@ hr {
             }
         }
         .basket-total-wrap p {
-            padding: 1em 0;
             border-top: 1px solid fade(@color-swatch5,8%);
             border-bottom: 1px solid fade(@color-swatch5,8%);
+            padding: 1em 0;
+            @media @tablet {
+                padding: 1.5em 0;
+            }
         }
         .basket-checkout-wrap {
             margin: 1.5em 0 1em;
@@ -1235,4 +1291,54 @@ hr {
     }
 }
 
+/* ===============================
+  ECOM - CHECKOUT
+   =============================== */
+
+.widget.ecomcheckout {
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            width: 100%;
+            max-height: 100px;
+            float: left;
+            padding: 1.5em 0;
+            margin-bottom: 1em;
+            border-bottom: 1px solid fade(@color-swatch5,8%);
+            .ecombasekit-item-image {
+                width: 6%;
+                height: 55px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                overflow: hidden;
+                float: left;
+                img {
+                    display: none;
+                }
+            }
+            span {
+                width: 94%;
+                float: right;
+                text-align: left;
+                padding-left: 5px;
+            }
+            button {
+                margin-left: 5px;
+                border: none;
+                background-color: transparent;
+                text-decoration: underline;
+                display: block;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+}
 
