@@ -1240,13 +1240,12 @@ hr {
                 width: 100%;
                 list-style: none;
                 float: left;
-                border-top: 1px solid fade(@color-swatch5,8%);
+                border-bottom: 1px solid fade(@color-swatch5,8%);
                 padding: 1em 0;
                 @media @tablet {
                     padding: 1.5em 0;
                 }
                 &:first-child {
-                    border-top: none;
                     @media @tablet {
                         border-top: 1px solid fade(@color-swatch5,8%);
                     }
@@ -1270,9 +1269,8 @@ hr {
 
                 }
                 span {
-                    font-size: 12px;
-                    line-height: 22px;
-
+                    font-size: bkscale(@font-swatch5-font-size,0.9);
+                    line-height: bkscale(@font-swatch5-line-height,0.9);
                 }
                 span, button {
                     width: 145px;
@@ -1296,12 +1294,7 @@ hr {
             }
         }
         .ecombasket-total-wrap p {
-            border-top: 1px solid fade(@color-swatch5,8%);
-            border-bottom: 1px solid fade(@color-swatch5,8%);
-            padding: 1em 0;
-            @media @tablet {
-                padding: 1.5em 0;
-            }
+            padding: 1em 0 0;
         }
         .ecombasket-checkout-wrap {
             margin: 1.5em 0 1em;
