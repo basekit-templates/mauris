@@ -1110,51 +1110,47 @@ hr {
                 }
             }
         }
-        .ecom-product-long-description {
-            width: 100%;
-            clear: both;
-        }
-        .ecom-product-title, .ecom-product-sku, .ecom-product-price , span {
-            width: 50%;
-            padding-left: 3%;
-            float: left;
-            text-align: left;
-            @media only screen and (max-width: 570px) {
-                width:100%;
-                padding-left: 0;
+       
+        .ecom-product-info {
+            width: 48%;
+            float: right;
+            @media @tablet {
+                width: 100%;
+            }
+            .ecom-product-title, .ecom-product-sku, .ecom-product-price , span {
+                width: 100%;
+                float: left;
+            }
+
+            select {
+                width: auto;
+                -webkit-appearance: menulist;
+            }
+
+            .ecom-product-price {
+                margin-top: 1em;
+            }
+
+            .ecom-product-tag {
+                margin-bottom: 2em;
+            }
+
+            .ecom-product-vartitle {
+                width: auto;
+                margin-right: 0.5em;
+
             }
         }
 
-        select {
-            width: auto;
-            -webkit-appearance: menulist;
-        }
-
-        .ecom-product-price {
-            margin-top: 1em;
-        }
-
-        .ecom-product-tag {
-            margin-bottom: 2em;
-        }
-
-        .ecom-product-vartitle {
-            width: auto;
-            margin-right: 0.5em;
-
+        .ecom-product-long-description {
+            width: 100%;
+            clear: both;
         }
 
         button {
             width: auto;
             float: left;
-            margin: 3%;
-            @media only screen and (max-width: 570px) {
-                margin: 3% 0;
-            }
-            .btn {
-                width: auto;
-                
-            }
+            margin: 4% 0;
         }
     } /* end ecom-product */
 } /* end .widget.ecomproduct */
@@ -1432,11 +1428,8 @@ hr {
         }
         select {
             margin-bottom: 1.5em;
-            width: 100%;
-            -webkit-border-radius: 0px;
-            -moz-border-radius: 0px;
-            border-radius: 0px;
             width: 50%;
+            -webkit-appearance: menulist;
             @media @tablet {
                 width: 100%;
             }
