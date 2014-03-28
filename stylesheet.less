@@ -1144,10 +1144,6 @@ hr {
 }   
 
 .widget.ecombasket {
-    float: right;
-    margin-right: 2.5%;
-    width: 250px;
-    z-index: 2;
     @media @tablet {
         width: 90%;
         margin: 0 5%;
@@ -1291,6 +1287,16 @@ hr {
     }
 }
 
+.nav-header .widget.ecombasket {
+    float: right;
+    margin-right: 2.5%;
+    width: 250px;
+    z-index: 2;
+    .ecombasket-pull p,
+    .ecombasket-pull p span {
+        color:@color-swatch5;
+    }
+}
 /* ===============================
   ECOM - CHECKOUT
    =============================== */
