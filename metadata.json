@@ -4,9 +4,9 @@
     "screenshot":"mauris.png",
     "pageTypes": ["default", "home", "about", "contact", "gallery"],
     "tags": {
-    "en": ["clean", "menu", "cafe", "bar", "restaurant"],
-    "es": ["limpio", "menú", "cafetería", "bar", "restaurante"],
-    "br": ["limpo", "menu", "cafeteria", "bar", "restaurante"]
+    "en": ["clean", "menu", "ecommerce", "shop"],
+    "es": ["limpio", "menú", "ecommerce", "tienda"],
+    "br": ["limpo", "menu", "ecommerce", "loja"]
     },
     "colorSwatches":
     {
