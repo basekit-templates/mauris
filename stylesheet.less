@@ -1207,54 +1207,40 @@ hr {
         float: left;
     }
 }   
-
 .widget.ecombasket {
     .ecombasket-pull {
         @media @tablet {
-            width:180px;
-            padding: 0 1em;
+            width:150px;
+            padding: 10px;
             background-color: @font-swatch7-background-color;
         }
         @media @mobile {
             width:100%;
             text-align: center;
         }
-        p {
-            &:before {
-                content: "";
-                background-image: image('/images/basketicon.png');
-                background-repeat: no-repeat;
-                display: inline-block;
-                height: 16px;
-                width: 21px;
-                margin: 0 10px 0 0;
-                position: relative;
-                top:1px;
-            }
+        p, .basket-count {
             @media @tablet {
+                padding: 0;
                 color: @color-swatch6 !important;
                 font-size: @font-swatch7-font-size;
                 line-height: @font-swatch7-line-height;
                 font-weight: @font-swatch7-font-weight;
+                text-align: center;
             }
         }
-        .basket-count {
-            @media @tablet {
-                color: @color-swatch6 !important;
-            }
+        p:before {
+            content: "";
+            background-image: image('/images/basketicon.png');
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 16px;
+            width: 21px;
+            margin: 0 10px 0 0;
+            position: relative;
+            top:1px;
         }
     }
-    .ecombasket-pull p,
-    .ecombasket-pull p span {
-        color: @color-swatch5;
-        padding: 14px 0;
-        background-color: transparent;
-        @media @tablet {
-            color: @color-swatch5;
-            padding: 1em;
-        }
-
-    }
+   
     &:hover .ecombasket-list-container {
         display: block;
     }
