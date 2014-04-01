@@ -28,7 +28,10 @@
 </div>
 
 <div class="main wrapper clearfix">
-	{{zone('main')|raw}}
+    <div class="tablet-basket-container">
+        {{widget('ecombasket', 'tabletecombasket', {})|raw}}
+    </div>
+    {{zone('main')|raw}}
 </div>
 
 <footer class="bk-footer">
