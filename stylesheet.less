@@ -1025,7 +1025,6 @@ hr {
 }
 
 
-
 /* ===============================
   FOOTER 
    =============================== */
@@ -1110,9 +1109,11 @@ hr {
         }
         .ecom-product-info {
             width: 41%;
-            float: right;
+            float: left;
+            margin-left: 4%;
             @media @tablet {
                 width: 100%;
+                margin-left: 0;
             }
             .ecom-product-title {
                 color: @font-swatch5-color;
@@ -1209,6 +1210,9 @@ hr {
 }   
 .widget.ecombasket {
     .ecombasket-pull {
+        width: auto;
+        padding: 15px 0;
+        background-color: transparent;
         @media @tablet {
             width:150px;
             padding: 10px;
@@ -1361,6 +1365,7 @@ hr {
    =============================== */
 
 .widget.ecomcheckout {
+    clear: both;
     h2 {
         text-align: center;
         margin-bottom: 1em;
@@ -1410,11 +1415,10 @@ hr {
                     display: block;
                 }
                 .checkout-quantitybtn {
-                    border: 1px solid fade(@color-swatch5,8%);
                     display: inline-block;
                     margin: 10px 0 0;
                     button {
-                        background-color: darken(@color-swatch1,20%);
+                        background-color: @color-swatch3;
                         margin: 0;
                         font-size: 1em;
                         @media @tablet {
