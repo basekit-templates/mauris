@@ -1046,15 +1046,21 @@ hr {
 .ecom-productslist-product {
     text-align: center;
     margin-left: 0;
-    .ecom-productslist-title {
-        text-align: center;
-        a {
+    .ecom-productlist-info {
+        padding-top: 20px;
+        .ecom-productslist-title {
+            text-align: center;
             font-family: @font-swatch5-font-family;
             font-size: @font-swatch5-font-size;
             font-weight: @font-swatch5-font-weight;
             line-height: @font-swatch5-line-height;
-            color: @font-swatch5-color;
             letter-spacing: @font-swatch5-letter-spacing;
+            a {
+                color: @font-swatch5-color;
+            }
+        }
+        .ecom-productlist-price {
+            color: @color-swatch3;
         }
     }
 }
@@ -1180,7 +1186,6 @@ hr {
                 top:1px;
             }
         }
-
         .ecom-product-long-description {
             padding-top: 20px;
             width: 100%;
