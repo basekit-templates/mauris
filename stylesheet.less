@@ -74,10 +74,9 @@ body {
 }
 
 .widget {
-    .extendednavigation {
+    &.extendednavigation {
         float: none;
         position: relative;
-        max-width: 80%;
         @media @tablet {
             max-width: 100%;
         }
@@ -88,6 +87,7 @@ body {
             }
         }
         ul {
+            max-width: 70%;
             float: none;
             margin-left: 4.5%;
             text-align: center;
