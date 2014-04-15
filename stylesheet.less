@@ -1347,7 +1347,7 @@ hr {
                         line-height: bkscale(@font-swatch5-line-height,0.9);
                     }
                     .ecombasket-item-title, .ecombasket-item-count, .ecombasket-item-price, .ecombasket-remove-button {
-                        float: left;
+                        display: inline-block;
                     }
                     .ecombasket-item-title, .ecombasket-item-count {
                         padding-right: 5px;
@@ -1465,6 +1465,9 @@ hr {
                 vertical-align: top;
                 .checkout-productname, .checkout-pricepu {
                     display: block;
+                }
+                .checkout-quantity {
+                    padding-right: 5px;
                 }
                 .checkout-quantitybtn {
                     display: inline-block;
