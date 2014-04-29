@@ -840,6 +840,7 @@ body {
         border: 1px solid darken(@color-swatch1,15%);
         background-color: #ffffff;
         margin: 0 5px 5px 0;
+        height: 42px;
     }
     .signupform fieldset button, .widget.profile form button {
         padding: 8px 14px;
@@ -966,9 +967,17 @@ body {
 }
 
 .blog-post-item {
-    margin: 1.5em 0;
-    padding-bottom: 1em;
+    margin: 3.5em 0;
+    padding-bottom: 3em;
+    @media @mobile {
+        margin: 2.5em 0;
+        padding-bottom: 2em;
+    }
     h2 {
+        padding: 0.5em 0;
+        @media @mobile {
+            padding: 0.5em 0 0;
+        }
         a {
             font-family: @font-swatch2-font-family;
             font-size: @font-swatch2-font-size;
@@ -1003,12 +1012,18 @@ width: 100%;
 /* BLOG SEARCH */
 .blogsearch {
     form {
+        label {
+            display: block;
+        }
         input {
             border: 1px solid darken(@color-swatch1,10%);
+            height: 42px;
+            margin: 0 5px 5px 0;
+            width: 40%;
             }
 
         button {
-            padding: 10px;
+            padding: 8px 14px;
             font-family: @font-swatch7-font-family;
             color: @font-swatch7-color;
             font-size: @font-swatch7-font-size;
