@@ -1087,20 +1087,25 @@ hr {
 
 .widget.ecomproductslist {
     .productlist-display-form {
-        background-color: darken(@color-swatch1,5%);
-        width: 97%;
-        margin: 1% 3% 3%;
-        padding: 1% 3%;
+        width: 66.5%;
+        margin: 1.4% 0 3% 3%;
+        display: inline-block;
+        @media @tablet {
+            width: 103%;
+        }
         @media @mobile {
             margin-left: 0;
+            margin-bottom: 20px;
             width: 100%;
+            background-color: darken(@color-swatch1,5%);
+            padding: 2em 1em 1em;
         }
         .form-group {
-            width: 30%;
-            margin: 1% 3% 1% 0;
+            width: 28.7%;
+            margin-right: 3%;
             display: inline-block;
             @media @tablet {
-                width: 46%;
+                width: 28%;
             }
             @media @mobile {
                 width: 100%;
@@ -1111,14 +1116,19 @@ hr {
             select {
                 -webkit-appearance: menulist;
                 width: 100%;
-                @media @tablet {
-                    margin-bottom: 20px;
-                }
             }
         }
     }
     .productlist-item-count {
-        margin-left: 3%;
+        width: 30%;
+        text-align: right;
+        display: inline-block;
+        margin-left: 0;
+        @media @tablet {
+            text-align: left;
+            width: 100%;
+            margin-left: 3%;
+        }
         @media @mobile {
             margin-left: 0;
         }
