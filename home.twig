@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<div class="bk-pt-home">
+
 <div class="nav-header">
     <div class="tabletmob-nav">
         {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
@@ -40,5 +42,7 @@
         {{widget('socialicons', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
     </div>
 </footer>
+
+</div>
 
 {% endblock %}
