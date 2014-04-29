@@ -11,7 +11,7 @@ body {
     background-size: cover;
 }
 
-.bk-pt-default .main {
+.bk-pt-default .main, .bk-pt-home .main {
     @media @tablet {
         border-top: none;
     }
@@ -1086,21 +1086,22 @@ hr {
         margin: 1% 0 3.5% 3%;
         display: inline-block;
         @media @tablet {
-            width: 103%;
+            background-color: darken(@color-swatch1,5%);
+            width: 97%;
+            padding: 2em 1em 1em;
         }
         @media @mobile {
             margin-left: 0;
             margin-bottom: 20px;
             width: 100%;
-            background-color: darken(@color-swatch1,5%);
-            padding: 2em 1em 1em;
         }
         .form-group {
             width: 28.7%;
             margin-right: 3%;
             display: inline-block;
             @media @tablet {
-                width: 28%;
+                width: 29%;
+                margin-right: 3.82%;
             }
             @media @mobile {
                 width: 100%;
