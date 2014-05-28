@@ -1120,7 +1120,7 @@ hr {
         display: inline-block;
         @media @tablet {
             background-color: darken(@color-swatch1,5%);
-            width: 97%;
+            width: 100%;
             padding: 2em 1em 1em;
         }
         @media @mobile {
@@ -1129,26 +1129,17 @@ hr {
             width: 100%;
         }
         .form-group {
-            width: auto;
             margin-right: 1%;
             display: inline-block;
             @media @tablet {
-                width: 29%;
                 margin-right: 3.82%;
             }
             @media @mobile {
                 width: 100%;
             }
             label[for="productlist-sort"] {
-                display: block;
-                margin-right: 2%;
                 display: inline-block;
-                @media @tablet {
-                    width: 100%;
-                }
-            }
-            &:first-child select {
-                width: 71%;
+                margin-right: 5px;
                 @media @tablet {
                     width: 100%;
                 }
@@ -1157,7 +1148,10 @@ hr {
                 display: none;
             }
             select {
-                width: 100%;
+                display: inline-block;
+                @media @tablet {
+                    width: 100%;
+                }
             }
         }
     }
