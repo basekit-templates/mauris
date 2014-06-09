@@ -6,14 +6,14 @@
 
 <div class="nav-header">
     <div class="tabletmob-nav">
-        {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
+        {{widget('extendednavigation', 'tabletmobnavigation', {"align":"center"})|raw}}
     </div>
 
     <div class="feature-content">
         {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"","defaultBgImg": asset('images/feature-bg.jpg'),'showBtn': false})|raw}}
         <header class="bk-header">
             <div class="desktop-nav">
-                {{widget('extendednavigation', 'desktopnavigation', {})|raw}}
+                {{widget('extendednavigation', 'desktopnavigation', {"align":"left"})|raw}}
                 <div class="basket-container">
                     {{widget('ecombasket', 'desktopecombasket', {})|raw}}
                 </div>
