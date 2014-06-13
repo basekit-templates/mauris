@@ -1106,60 +1106,94 @@ hr {
    =============================== */
 
 .widget.ecomproductslist {
-    .productlist-display-form {
-        width: 100%;
-        margin: 1% 0 3.5% 3%;
+    .productlist-filter {
+        margin: 1% 0 2% 3%;
         display: inline-block;
-        @media @tablet {
-            background-color: darken(@color-swatch1,5%);
-            width: 100%;
-            padding: 2em 1em 1em;
-        }
+        width: 100%;
         @media @mobile {
-            margin-left: 0;
-            margin-bottom: 20px;
-            width: 100%;
+            margin: 1% 0;
         }
-
-
-        .form-group {
-            margin-right: 1%;
-            display: inline-block;
-            @media @tablet {
-                margin-right: 3.82%;
-            }
+        .productlist-display-form {
             @media @mobile {
+                background-color: darken(@color-swatch1,5%);
+                padding: 2em 1em 0;
+                margin-bottom: 20px;
                 width: 100%;
             }
-            label[for="productlist-sort"] {
+            .form-group {
                 display: inline-block;
-                margin-right: 5px;
-                @media @tablet {
+                @media @mobile {
                     width: 100%;
                 }
-            }
-            label {
-                display: none;
-            }
-            select {
-                display: inline-block;
-                @media @tablet {
+                label[for="productlist-sort"] {
+                    display: inline-block;
+                    @media @tablet {
+                        width: 100%;
+                    }
+                }
+                label[for="productlist-categories"], label[for="productlist-tags"] {
+                    display: none;
+                }
+                select[name="displayCount"] {
+                    width: auto;
+                    @media @mobile {
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+                select {
+                    -moz-appearance: none;
+                    text-indent: 0.01px;
+                    text-overflow: '';
+                    background-position: right 12px center;
+                    background-position-x: 93%;
+                    background-position-y: 55%;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    -webkit-border-radius: 0;
+                    position: relative;
+                    background-image: image('/images/arrow-down.png');
+                    background-repeat: no-repeat;
+                    background-position: right 12px center;
+                    margin-bottom: 12px;
+                    padding: 8px 33px 8px 8px;
+                    border: 1px solid darken(@color-swatch1,8%);
+                    background-color: @color-swatch2;
+                    color: @color-swatch5;
+                    height: 35px;
                     width: 100%;
+                    @media @mobile {
+                        width: 100%;
+                        height: 45px;
+                    }
+                }
+                select::-ms-expand {
+                    display: none;
+                }
+                &.productlist-search {
+                    input {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -webkit-border-radius: 0;
+                        height: 35px;
+                        border: 1px solid darken(@color-swatch1,8%);
+                        @media @mobile {
+                            width: 100%;
+                            margin-bottom: 5px;
+                            height: 45px;
+                        }
+                    }
+                    .btn {
+                        padding: 4px 14px;
+                        &:hover {
+                            background-color: @color-swatch5;
+                        }
+                        @media @mobile {
+                            padding: 8px 14px;
+                        }
+                    }
                 }
             }
-        }
-    }
-    .productlist-item-count {
-        width: 30%;
-        text-align: right;
-        display: inline-block;
-        margin-left: 0;
-        @media @tablet {
-            text-align: left;
-            width: 100%;
-        }
-        @media @mobile {
-            margin-left: 0;
         }
     }
     .ecom-productslist-product {
@@ -1239,7 +1273,6 @@ hr {
         .ecom-product-info {
             width: 41%;
             float: left;
-            margin-left: 4%;
             @media @tablet {
                 width: 100%;
                 margin-left: 0;
@@ -1294,9 +1327,8 @@ hr {
             }
         }
         .btn {
-            border: 2px solid lighten(@color-swatch5,15%);
             width: 70%;
-            margin: 2.5em 0 0;
+            margin: 2em 0;
             @media @tablet {
                 width:50%;
             }
@@ -1317,7 +1349,7 @@ hr {
                     top: 4px;
                 }
                 &:hover .text:before {
-                    background-image: image('/images/basketicon-white.png');
+                    background-image: image('/images/basketicon.png');
                 }
                 &.added {
                     color: @color-swatch2;
@@ -1339,11 +1371,11 @@ hr {
                 marin-top: 1.5em;
                 text-align: center;
             }
+        }
+        .ecom-product-go-to-checkout-btn-wrapper a {
+            text-decoration: none;
             &:hover {
-                border: 2px solid @color-swatch5;
-                background-color: @color-swatch5;
-                color: @color-swatch2;
-                cursor: pointer;
+                background-color: @font-swatch7-background-color-hover;
             }
         }
         .ecom-product-long-description {
@@ -1527,10 +1559,7 @@ hr {
                     @media @mobile {
                         max-width: 79%;   
                     }   
-                    .ecombasket-item-title, .ecombasket-item-count, .ecombasket-item-price, .ecombasket-remove-button {
-                        font-size: bkscale(@font-swatch5-font-size,0.5);
-                        line-height: bkscale(@font-swatch5-line-height,0.9);
-                    }
+
                     .ecombasket-item-title, .ecombasket-item-count, .ecombasket-item-price, .ecombasket-remove-button {
                         display: inline-block;
                     }
@@ -1836,10 +1865,11 @@ hr {
                 font-weight: @font-swatch5-font-weight;
                 line-height: @font-swatch5-line-height;
                 letter-spacing: @font-swatch5-letter-spacing;
+                color: @font-swatch5-color;
                 padding: 0;
             }
             .ecom-featuredproducts-price {
-                color: @color-swatch3;
+                color: @font-swatch5-color;
                 font-weight: 700;
                 font-size: bkscale(@font-swatch5-font-size,1.1);
             }
@@ -1851,4 +1881,18 @@ hr {
     .ecom-featuredproducts-image-wrap {
         background-color: @color-swatch2;
     }
+}
+
+/* ===============================
+  ECOM - CATEGORY LIST
+   =============================== */
+
+.product-category h3 {
+    font-family: @font-swatch2-font-family;
+    font-size: @font-swatch2-font-size;
+    font-weight: @font-swatch2-font-weight;
+    line-height: @font-swatch2-line-height;
+    letter-spacing: @font-swatch2-letter-spacing;
+    color: @font-swatch2-color;
+    padding: 1em 0 0.5em;
 }
