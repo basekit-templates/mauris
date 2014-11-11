@@ -1151,6 +1151,9 @@ width: 100%;
             line-height: @font-swatch7-line-height;
             background-color: @font-swatch7-background-color;
             border: none;
+            &:hover {
+                background-color:@font-swatch7-background-color-hover
+            }
         }
     }
 }
@@ -1216,7 +1219,7 @@ hr {
         .productlist-display-form {
             @media @mobile {
                 background-color: darken(@color-swatch1,5%);
-                padding: 2em 1em 0;
+                padding: 2em 1em 2em;
                 margin-bottom: 20px;
                 width: 100%;
             }
@@ -1224,6 +1227,7 @@ hr {
                 display: inline-block;
                 @media @mobile {
                     width: 100%;
+                    margin-bottom:0;
                 }
                 label[for="productlist-sort"] {
                     display: inline-block;
@@ -2049,4 +2053,27 @@ hr {
     letter-spacing: @font-swatch2-letter-spacing;
     color: @font-swatch2-color;
     padding: 1em 0 0.5em;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    background-position: right 12px center;
+    background-position-x: 93%;
+    background-position-y: 55%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    position: relative;
+    background-image: image('/images/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    margin-bottom: 12px;
+    padding: 8px 33px 8px 8px;
+    border: 1px solid darken(@color-swatch1,8%);
+    background-color: @color-swatch2;
+    color: @color-swatch5;
+    height: 35px;
+    width: 100%;
 }
