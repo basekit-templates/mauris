@@ -1541,6 +1541,14 @@ hr {
                     display: block;
                     a {
                         text-decoration: underline;
+                        &:after {
+                            content: ",";
+                            display: inline-block;
+                            text-decoration: none;
+                        }
+                        &:last-child:after {
+                            display: none;
+                        }
                         &:hover {
                             text-decoration: none;
                         }
@@ -1882,6 +1890,10 @@ hr {
     .basket-summary-title {
         text-align: center;
         padding: 0 0 1em;
+    }
+
+    .basket-summary-product-info {
+        padding-right: 1em;
     }
 
     // Empty basket
