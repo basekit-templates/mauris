@@ -787,18 +787,23 @@ button.btn:hover {
   SIGN UP FORM & PROFILE FORM
    =============================== */
 
-   .widget.signupform fieldset input, .widget.profile form fieldset input {
-        border: 1px solid darken(@color-swatch1,15%);
-        background-color: #ffffff;
-        margin: 0 5px 5px 0;
-        height: 42px;
-        @media @tablet {
-            width: 100%;
-        }
+.widget.signupform fieldset input, .widget.profile form fieldset input {
+    border: 1px solid darken(@color-swatch1,15%);
+    background-color: #ffffff;
+    margin: 0 5px 5px 0;
+    height: 42px;
+    @media @tablet {
+        width: 100%;
     }
-    .signupform fieldset button, .widget.profile form button {
-        padding: 8px 14px;
-    }
+}
+
+.signupform fieldset button, .widget.profile form button {
+    padding: 8px 14px;
+}
+
+.responsivecolumns .widget.signupform fieldset input {
+    width: auto;
+}
 
 
 /* ===============================
