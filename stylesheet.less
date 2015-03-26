@@ -176,8 +176,8 @@ body {
                 }
 
                 &.folder {
-                    /* Folder dropdown arrow BG style goes Here */  
-                    margin-right: 20px;            
+                    /* Folder dropdown arrow BG style goes Here */
+                    margin-right: 20px;
                     cursor: pointer;
                     z-index: 600;
                     &:after {
@@ -290,7 +290,7 @@ body {
     position: absolute;
     bottom: 0;
     padding: 2.3em 0 2em;
-    margin: 0 auto; 
+    margin: 0 auto;
     background-color: @color-swatch1;
     @media @tablet {
         display: none;
@@ -410,7 +410,7 @@ body {
                         font-size: bkscale(@font-swatch10-font-size,0.8);
                         line-height: bkscale(@font-swatch10-line-height,0.8);
                     }
-            } 
+            }
 
         } /* end companyheader */
 
@@ -540,7 +540,7 @@ body {
                     padding: 0;
                     margin: 0;
                     border: none;
-                } 
+                }
 
             /* SECTION AND SUB-SECTION HEADERS */
 
@@ -559,7 +559,7 @@ body {
                     color: @font-swatch2-color;
                 }
                 p { /* description */
-                    padding: 5px 0 0; 
+                    padding: 5px 0 0;
                 }
 
                     li { /* menu-item */
@@ -597,7 +597,7 @@ body {
                             display: inline-block;
                             width:100%;
                             padding: 2em 0;
-                            h3 { /* menu-item-name */  
+                            h3 { /* menu-item-name */
                                 padding: 0;
                                 margin-bottom: 5px;
                             }
@@ -620,7 +620,7 @@ body {
                                 list-style: none;
                                 padding: 0;
                                 margin: 0;
-                            } 
+                            }
                             .menu-item-price p {
                                 font-family:@font-swatch3-font-family;
                                 font-size:@font-swatch3-font-size;
@@ -657,7 +657,7 @@ body {
                                 margin: 0;
                                 padding: 0;
                             }
-                            .menu-item-nutritional-prop { 
+                            .menu-item-nutritional-prop {
                                 font-size:@font-swatch5-font-size;
                                 font-weight: @font-swatch5-font-weight;
                                 line-height:@font-swatch5-line-height;
@@ -689,7 +689,7 @@ body {
                                 .not-spicy-icon {
                                     display: none;
                                 }
-                            } /* end menu-section-item-dietary-props */   
+                            } /* end menu-section-item-dietary-props */
 
 
                             .menu-item-description, .menu-section-item-description {
@@ -700,9 +700,9 @@ body {
 
                     } /* end li menu-item */
 
-                } /* end ol */  
+                } /* end ol */
 
-                .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
+                .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */
                     border: 1px dotted @color-swatch4;
                     padding: 0 2em 2em;
                     margin: 2em 0 1em;
@@ -816,7 +816,7 @@ button.btn:hover {
       min-height: @twitterProfilePicSize;
       margin-bottom: 20px;
       padding-bottom: 0;
-     
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -840,11 +840,11 @@ button.btn:hover {
         position: absolute;
         left: 0;
         top: 0;
-        
+
         @media @mobile {
           width: (@twitterProfilePicSize * 0.45);
           height: (@twitterProfilePicSize * 0.45);
-          
+
         }
         img {
           width: 100%;
@@ -855,7 +855,7 @@ button.btn:hover {
       .twitter-content {
         line-height: 1.2em;
         margin-left: (@twitterProfilePicSize + 20);
-       
+
         @media @mobile {
           margin-left: (@twitterProfilePicSize * 0.55 + 12);
         }
@@ -889,6 +889,20 @@ button.btn:hover {
   }
 }
 
+
+
+/* ===============================
+   CONTENT WIDGET
+   =============================== */
+
+.widget.content {
+    a {
+        box-shadow: inset 0px -1px 0px 0px @color-swatch3;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
 
 
 /* ===============================
@@ -1099,7 +1113,7 @@ width: 100%;
 
 
 /* ===============================
-  SOCIAL ICONS 
+  SOCIAL ICONS
    =============================== */
 
 .bk-footer .widget.socialicons .icons span a, .widget.socialicons span a {
@@ -1130,7 +1144,7 @@ hr {
 
 
 /* ===============================
-  FOOTER 
+  FOOTER
    =============================== */
 
 .bk-footer {
@@ -1429,7 +1443,7 @@ hr {
                 background-color: darken(@color-swatch1,3%);
                 padding: 1em;
             }
-        } 
+        }
     } /* end ecom-product */
 } /* end .widget.ecomproduct */
 
@@ -1491,7 +1505,7 @@ hr {
     }
 }
 
- 
+
 .widget.ecombasket { /* STYLE FOR BASKET */
 
     .ecombasket-pull {
@@ -1537,9 +1551,9 @@ hr {
                 background-color: @font-swatch7-background-color-hover;
             }
         }
-        
+
     }
-   
+
     &.show-content .ecombasket-list-container {
         display: block;
     }
@@ -1552,7 +1566,7 @@ hr {
         border-radius: 0 0 5px 5px;
         background-color: @color-swatch1;
         margin-bottom: 1em;
-        
+
         @media @tablet {
             right: 0;
         }
@@ -1596,20 +1610,20 @@ hr {
                     }
                     @media @tablet {
                         width: 10%;
-                    } 
+                    }
                     @media @mobile {
                         width: 18%;
-                    }                
+                    }
                 }
                 .ecombasket-item-info {
                     float: left;
-                    max-width: 65%;    
+                    max-width: 65%;
                     @media @tablet {
-                        max-width: 87%;   
-                    } 
+                        max-width: 87%;
+                    }
                     @media @mobile {
-                        max-width: 79%;   
-                    }   
+                        max-width: 79%;
+                    }
 
                     .ecombasket-item-title, .ecombasket-item-count, .ecombasket-item-price, .ecombasket-remove-button {
                         display: inline-block;
@@ -1699,7 +1713,7 @@ hr {
     .basket-summary-title {
         text-align: center;
         padding: 0 0 1em;
-    }   
+    }
 
     // Empty basket
     .basket-summary-empty-copy {
@@ -1732,7 +1746,7 @@ hr {
                     display: block;
                     padding: 10px 0 0 0;
                 }
-            }            
+            }
         }
 
         // Table Head
