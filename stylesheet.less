@@ -1379,6 +1379,7 @@ hr {
             }
             .form-group {
                 display: inline-block;
+                max-width: 25%;
                 @media @mobile {
                     width: 100%;
                     margin-bottom:0;
@@ -1403,9 +1404,7 @@ hr {
                     -moz-appearance: none;
                     text-indent: 0.01px;
                     text-overflow: '';
-                    background-position: right 12px center;
-                    background-position-x: 93%;
-                    background-position-y: 55%;
+                    background-position: right 12px;
                     cursor: pointer;
                     -webkit-appearance: none;
                     -webkit-border-radius: 0;
@@ -1429,11 +1428,12 @@ hr {
                     display: none;
                 }
                 &.productlist-search {
+                    white-space: nowrap;
                     input {
                         -webkit-appearance: none;
                         -moz-appearance: none;
                         -webkit-border-radius: 0;
-                        height: 35px;
+                        height: 34px;
                         border: 1px solid darken(@color-swatch1,8%);
                         @media @mobile {
                             width: 100%;
@@ -1442,7 +1442,7 @@ hr {
                         }
                     }
                     .btn {
-                        padding: 4px 14px;
+                        padding: 5px 14px;
                         &:hover {
                             background-color: @color-swatch5;
                         }
