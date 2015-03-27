@@ -271,6 +271,9 @@ div.widget .extendednavigation ul.align-right {
    FEATURE
    =============================== */
 
+.widget.feature .feature-bgimg {
+    display: block;
+}
 
 .widget.feature .feature-bgimg, .widget.feature .feature-bgimg .content {
    height: 580px;
@@ -395,11 +398,9 @@ div.widget .extendednavigation ul.align-right {
                 height: 159px;
                 overflow: hidden;
                 img {
-                    position: absolute;
+                    width: auto !important;
                     margin: 0 auto;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
+                    height: auto;
                 }
             }
             .companyname a {
@@ -815,6 +816,11 @@ button.btn:hover {
         padding: 0;
         input, textarea {
             border: 1px solid darken(@color-swatch1,15%);
+        }
+        textarea {
+            display: block;
+            margin-bottom: 10px;
+            min-height: 6.5em;
         }
     }
 
