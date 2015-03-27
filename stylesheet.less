@@ -519,6 +519,11 @@ div.widget .extendednavigation ul.align-right {
         margin-top: 0.3em;
         float: left;
         width: 100%;
+
+        .menu-item-image-wrap {
+            background-position: -1000%;
+        }
+
         .main {
             padding: 0;
             border-top: 0;
@@ -545,10 +550,12 @@ div.widget .extendednavigation ul.align-right {
             .menu-header, .menu-subsection-header {
                 margin: 0;
                 padding: 4em 0 2em;
+                text-align: center;
+
                 @media @tablet {
                     padding: 2em 0 0.5em;
                 }
-                text-align: center;
+
                 h1 { /* menu-name */
                     padding: 0;
                 }
@@ -559,13 +566,15 @@ div.widget .extendednavigation ul.align-right {
                 p { /* description */
                     padding: 5px 0 0;
                 }
+            }
+
 
                     li { /* menu-item */
                         position: relative;
                         display: block;
                         text-align: center;
                         padding: 0;
-                        margin-bottom: 0;
+                        margin-bottom: 1em;
                         width: 100%;
                         &.menu-item-promoted { /* menu-item-promoted */
                                 display: inline-block;
@@ -619,6 +628,9 @@ div.widget .extendednavigation ul.align-right {
                                 padding: 0;
                                 margin: 0;
                             }
+
+
+
                             .menu-item-price p {
                                 font-family:@font-swatch3-font-family;
                                 font-size:@font-swatch3-font-size;
@@ -696,9 +708,14 @@ div.widget .extendednavigation ul.align-right {
 
                         } /* end inner-item */
 
-                    } /* end li menu-item */
+
 
                 } /* end ol */
+
+                .menu-subsection-name {
+                    font-size: @font-swatch3-font-size;
+                    line-height: @font-swatch3-line-height;
+                }
 
                 .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */
                     border: 1px dotted @color-swatch4;
